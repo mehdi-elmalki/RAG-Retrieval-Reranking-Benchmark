@@ -1,0 +1,80 @@
+{
+  "bm25": {
+    "Hit@1": 0.4743158905424868,
+    "Hit@5": 0.727796447431589,
+    "Hit@10": 0.7969275084013442,
+    "MRR@10": 0.5836935814492225,
+    "nDCG@10": 0.6353917509533733,
+    "n": 2083
+  },
+  "tfidf": {
+    "Hit@1": 0.34469515122419586,
+    "Hit@5": 0.6394623139702352,
+    "Hit@10": 0.7489198271723476,
+    "MRR@10": 0.4733079197433494,
+    "nDCG@10": 0.5394324160893337,
+    "n": 2083
+  },
+  "lsa": {
+    "Hit@1": 0.02688430148823812,
+    "Hit@5": 0.09553528564570331,
+    "Hit@10": 0.1497839654344695,
+    "MRR@10": 0.056027250074297597,
+    "nDCG@10": 0.07776682758172741,
+    "n": 2083
+  },
+  "hybrid": {
+    "Hit@1": 0.4743158905424868,
+    "Hit@5": 0.727796447431589,
+    "Hit@10": 0.7969275084013442,
+    "MRR@10": 0.5836935814492225,
+    "nDCG@10": 0.6353917509533733,
+    "n": 2083
+  },
+  "rrf": {
+    "Hit@1": 0.1603456553048488,
+    "Hit@5": 0.49063850216034566,
+    "Hit@10": 0.672107537205953,
+    "MRR@10": 0.2975866614848852,
+    "nDCG@10": 0.38570547299929336,
+    "n": 2083
+  },
+  "rerank": {
+    "Hit@1": 0.4699951992318771,
+    "Hit@5": 0.7551608257321172,
+    "Hit@10": 0.8228516562650025,
+    "MRR@10": 0.588024750626767,
+    "nDCG@10": 0.6449932662837579,
+    "n": 2083
+  },
+  "reader_top_reranked_context": {
+    "accuracy": 0.5679308689390302,
+    "precision_yes": 0.6464646464646465,
+    "recall_yes": 0.6515270164447925,
+    "f1_yes": 0.6489859594383776,
+    "n": 2083
+  },
+  "latency_e2e_ms": {
+    "p50": 19.24306099954265,
+    "p95": 24.563917600426066,
+    "mean": 19.730904023034217,
+    "n": 2083,
+    "scope": "CPU; retrieval + reranking + binary reader; corpus representations already loaded"
+  },
+  "settings": {
+    "seed": 20261114,
+    "documents": 12259,
+    "train_queries": 8794,
+    "reranker_fit_queries": 1600,
+    "validation_queries": 1820,
+    "test_queries": 2083,
+    "fusion_alpha_bm25": 1.0,
+    "fusion_alpha_selected_on": "validation Hit@5",
+    "rrf_k": 60,
+    "svd_components": 48,
+    "reranker": "balanced logistic regression on retrieval features, fitted on fixed 1,600-query training sample",
+    "reader": "TF-IDF + logistic regression binary yes/no",
+    "answers_are_generative": false,
+    "evaluation": "title-group holdout; all labeled test predictions scored once"
+  }
+}
