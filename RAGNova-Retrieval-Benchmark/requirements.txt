@@ -1,0 +1,10 @@
+# Versions testées avec Python 3.12 (64 bits). scikit-learn DOIT rester 1.8.0 :
+# c'est la version qui a créé 06_Experiments/results/rag_nova_models.joblib.
+numpy==2.3.5
+scipy==1.18.1
+pandas==3.1.1
+scikit-learn==1.8.0
+joblib==1.6.0
+streamlit==1.67.0
+pyarrow==26.0.1
+matplotlib==3.11.2

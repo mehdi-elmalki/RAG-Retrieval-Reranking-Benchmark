@@ -1,0 +1,5 @@
+# Uniquement pour régénérer rapport/présentation (build_deliverables.py), non requis par l'application.
+-r requirements.txt
+python-docx>=1.1
+python-pptx>=1.0
+pypdf>=5.0
